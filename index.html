@@ -1,33 +1,64 @@
-<!doctype html>
-<html>
-  <head lang="pt-BR">
-     <meta charset="utf-8" />
-     <meta name="viewport" content="width=device-width, inicial-scale=1.0">
-     <title> Meu HTML </title>
-     
-     <style>
-        h1 {
-          background: yellow;
-          }
-       #heading{
-         background: purple;
-       }
-       .Fundo-amarelo{
-          background: red;
-       }
-       .color-letra{
-          color: blue;
-       }
-    </style>
-  </head>
-  <body>
-          <h1 id="heading" class="Fundo-amarelo test">POP</h1> 
-       <p class="color-letra">
-         TEC  <b>1000TECH</b>
-       </p>
-      <h1 id="heading2" class="Fundo-amarelo">1000TECH</h1>
-  
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1000TECH</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="ti"><h1>1000TECH</h1></div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="page2.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <h2>1000TECH</h2>
+        </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa especializada em soluções inovadoras para o seu negócio.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="section">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service">
+                <h3>Consultoria</h3>
+                <p>Oferecemos consultoria estratégica para otimizar seu negócio.</p>
+            </div>
+            <div class="service">
+                <h3>Desenvolvimento Web</h3>
+                <p>Criamos websites e sistemas personalizados para sua empresa.</p>
+            </div>
+            <div class="service">
+                <h3>Marketing Digital</h3>
+                <p>Ajudamos a aumentar a visibilidade da sua marca online.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Empresa Exemplo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
 </html>
-<!--O id tem a maior prioridade, para reescrvelo so com !important(force) -->
-aula 377
+
