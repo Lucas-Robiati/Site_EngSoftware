@@ -21,26 +21,55 @@ header {
     text-align: center;
 }
 
+header h1{
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #2196F3;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
 header nav ul {
     list-style: none;
-    padding: auto;
+    padding: 0;
+    width: auto;
+    min-width: 600px;
 }
 
 header nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
 }
 
 header nav ul li a {
-    color: white;
+    color: rgb(173, 164, 164);
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: ease-in-out 1s;
+    position: relative;
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+    padding: 0px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
 }
 
-header nav ul li a:hover {
-    background-color: #2196F3;
+header nav ul li a:after {
+    content: "";
+    position: absolute;
+    background-color: #00BFFF;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+header nav ul li a:hover{
+    color: white;
+}
+header nav ul li a:hover:after {
+    width: 90%;
     transform: scale(1.1);
 }
 
@@ -97,4 +126,12 @@ background-color: transparent;
 background-color: #00BFFF;
     transform: scale(1.1);
 }
-
+        /* Adicionando a imagem no canto inferior direito */
+.floating-image {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 600px; /* Tamanho da imagem */
+    height: auto;
+    z-index: -1000; /* Garantir que ela fique acima de outros elementos */
+}
