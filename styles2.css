@@ -126,12 +126,33 @@ background-color: transparent;
 background-color: #00BFFF;
     transform: scale(1.1);
 }
-        /* Adicionando a imagem no canto inferior direito */
-.floating-image {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 600px; /* Tamanho da imagem */
+
+/* Configuração geral */
+.form-container {
+    position: relative; /* Posição relativa para ser referência da imagem */
+    width: 600px; /* Largura do formulário e da área */
+    margin: 0 auto; /* Centraliza a div na página */
+}
+
+/* Estilo dos campos e botão */
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os elementos */
+}
+
+/* Estilo da imagem */
+.side-image {
+    position: absolute; /* Posiciona em relação ao .form-container */
+    top: -70px; /* Ajuste vertical a partir do topo do container */
+    left: 400px; /* Ajuste horizontal para fora da div */
+    width: 600px; /* Tamanho ajustável da imagem */
     height: auto;
-    z-index: -1000; /* Garantir que ela fique acima de outros elementos */
+}
+
+/* Botão */
+button {
+    width: 100px;
+    font-size: 16px;
+    cursor: pointer;
 }
