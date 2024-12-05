@@ -178,6 +178,30 @@ header nav ul li a:hover:after {
     transform: scale(1.1);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+.classe {
+    font-family: 'Roboto', sans-serif; /* Fonte personalizada */
+    padding: 20px; /* Espaçamento interno */
+     display: grid;
+    place-items: center;
+    margin:0;
+}
+
+.classe h2 {
+    font-weight: 700; /* Peso da fonte mais forte */
+    color: #2196F3; /* Cor do texto */
+}
+
+.classe p {
+    font-weight: 300; /* Peso da fonte mais leve */
+    color: #ffffff; /* Cor do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+
+
+
 /* Rodapé */
 footer {
     background-color: #333;
