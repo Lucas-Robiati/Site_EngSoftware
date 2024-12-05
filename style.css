@@ -40,6 +40,7 @@ header {
     text-align: center; 
 }
 
+
 header .container{
     padding: 10px 20px;
     display: flex;
@@ -86,6 +87,7 @@ header nav ul li a {
     padding: 0px 10px;
     border-radius: 2px;
     letter-spacing: 0.5px;
+    text-align: right;
 }
 
 header nav ul li a:after {
