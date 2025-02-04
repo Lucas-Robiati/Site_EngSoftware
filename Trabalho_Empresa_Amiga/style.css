@@ -13,8 +13,6 @@ h1 {
     -webkit-text-fill-color: #000000; /* Cor do texto */
 }
 
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -110,6 +108,14 @@ section {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+}
+
+#contato img{
+    position: relative;
+    width: 50%;
+    height: 40%;
+    left: -50%;
+    z-index: -1;
 }
 
 #contato input, #contato textarea {
