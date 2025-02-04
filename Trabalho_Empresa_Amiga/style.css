@@ -6,14 +6,6 @@
     font-style: normal;
 }
 
-h1 {
-    font-family: 'MinhaFonte', sans-serif;
-    font-size: 5em !important;
-    -webkit-text-stroke: 1px white; /* Contorno fino preto */
-    -webkit-text-fill-color: #000000; /* Cor do texto */
-}
-
-
 
 body {
     font-family: Arial, sans-serif;
@@ -25,13 +17,16 @@ body {
 header {
     background-color: #2e2711;
     color: white;
-    padding: 10px 0;
     text-align: center;
+    padding:10px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 5em !important;
+    -webkit-text-stroke: 1px white; /* Contorno fino preto */
+    -webkit-text-fill-color: #000000; /* Cor do texto */
 }
 .logo h1 {
     font-family: 'MinhaFonte', sans-serif;
@@ -43,7 +38,7 @@ header h1 {
 }
 
 .logo img {
-    width: 10%; /* Ajuste o tamanho da logo */
+    width: 12%; /* Ajuste o tamanho da logo */
     height: auto; /* Mantém a proporção */
 }
 
@@ -56,18 +51,32 @@ header h1 {
 header nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex; /* Deixa os itens lado a lado */
+    justify-content: center; /* Centraliza o menu */
+    gap: 20px; /* Espaçamento entre os itens */
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 15px; /* Adiciona um espaçamento interno */
+    border-radius: 8px; /* Deixa os cantos arredondados */
+    transition: 0.3s ease-in-out; /* Suaviza as animações */
 }
+
+header nav ul li a:hover {
+    background-color: #5c615c; /* Efeito de hover */
+    color: #25de1f; /* Muda a cor do texto ao passar o mouse */
+}
+
+
 
 .hero {
     background: url('img/florestas.jpg') no-repeat center center;
@@ -76,29 +85,70 @@ header nav ul li a {
     text-align: center;
     padding: 100px 0;
 }
+.hero h2, .hero p {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1); /* Sombra preta por trás do texto */
+}
 
 section {
     padding: 40px;
 }
-
 #servicos .services-container {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* Garante que os itens fiquem lado a lado */
+    justify-content: space-between; /* Distribui os itens com espaços entre eles */
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    gap: 20px; /* Espaçamento entre os itens */
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
 }
 
 .service {
-    background-color: #fff;
+    background: url('img/florestas.jpg') no-repeat center center;
+    /*background-color: #fff;*/
     padding: 20px;
-    width: 30%;
+    width: 30%; /* Cada serviço ocupa 30% da largura do container */
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 75px; /* Altura inicial do bloco */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o conteúdo fique bem distribuído */
 }
 
-.service img {
-    max-width: 100%;
-    border-radius: 8px;
+.service h3 {
+    margin: 0;
+    font-size: 1.5em;
 }
+
+.service p {
+    display: none; /* Esconde a descrição inicialmente */
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.service:hover {
+    transform: scale(1.05); /* Expande o bloco ao passar o mouse */
+    height: 250px; /* Expande a altura para revelar mais conteúdo */
+}
+
+.service:hover p {
+    display: block; /* Mostra a descrição ao passar o mouse */
+}
+
+/* Responsividade - Ajusta os serviços em telas menores */
+@media (max-width: 768px) {
+    #servicos .services-container {
+        flex-direction: column; /* Empilha os serviços verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .service {
+        width: 80%; /* Ajusta a largura dos serviços para 80% em telas pequenas */
+    }
+}
+
+
 
 #valores {
     background-color: #d9f7d9;
