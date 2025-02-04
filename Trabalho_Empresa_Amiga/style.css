@@ -106,3 +106,12 @@ footer {
     padding: 20px 0;
 }
 
+.contato
+{
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    text-align: left;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
